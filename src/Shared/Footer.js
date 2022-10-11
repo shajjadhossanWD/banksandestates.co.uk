@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div>
             <footer>
-                <div><p>Sign up for latest news and
+                <div><p className=''>Sign up for latest news and
                     insights from Quera.</p></div>
                 <div> <input type="text" placeholder="Type here" class="input w-full max-w-xs rounded-full" /></div>
             </footer>
