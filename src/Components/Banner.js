@@ -28,7 +28,7 @@ const Banner = () => {
     },
   ]
   return (
-    <>
+    <div className="mx-auto">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -36,6 +36,7 @@ const Banner = () => {
           delay: 2500,
           disableOnInteraction: false,
         }}
+        speed={2500}
         pagination={{
           clickable: true,
         }}
@@ -47,29 +48,25 @@ const Banner = () => {
           banner.map((item, index) =>
             <SwiperSlide key={index}>
               <div style={{ width: '100%' }}>
-                <Box
-                  sx={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    bgcolor: 'background.paper',
-                    alignItems: 'center'
-                  }}
-                >
+                <div className="md:flex justify-between items-center sm:flex-row-reverse">
+                  <img src={item.image} alt="" style={{width: '100vh', height:'80vh'}}/>
                   <Container maxWidth="sm">
-                    <Typography sx={{ fontSize: '20px', fontWeight: 'bold', mb: 2 }}>{item.title}</Typography>
-                    <Button variant="contained" disableElevation>
+                    <Typography sx={{ fontSize: '20px', fontWeight: 'bold', mb: 2, textAlign: 'left' }}>{item.title}</Typography>
+                    <div className="flex justify-start">
+
+                    <button className="btn btn-primary rounded-full">
                       Explore More
                       <NavigateNextIcon />
-                    </Button>
+                    </button>
+                    </div>
                   </Container>
-                  <img src={item.image} alt="" style={{width: '100vh', height:'70vh'}}/>
-                </Box>
+                </div>
               </div>
             </SwiperSlide>
           )
         }
       </Swiper>
-    </>
+    </div>
   );
 };
 

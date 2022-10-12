@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <div style={{ backgroundImage: `url(${background})` }}>
             <div className='p-20'>
-                <footer className='flex justify-between '>
+                <footer className='md:flex justify-between '>
                     <div>
                         <p className='text-4xl text-base-100 font-bold'>Sign up for latest news and <br /> insights from Quera.</p>
                     </div>

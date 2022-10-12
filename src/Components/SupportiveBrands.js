@@ -15,10 +15,10 @@ const SupportiveBrands = () => {
     ]
 
     return (
-        <div className='bg-primary'>
-            <div className='p-20 flex flex-row justify-between items-center'>
+        <div className='bg-primary p-5'>
+            <div className='sm:p-5 md:p-20 md:flex flex-row justify-between items-center'>
                 <p className='basis-1/4 text-4xl font-bold text-base-100'>Our Supportive <br /> Brands</p>
-                <div className='basis-1/2'>
+                <div className='basis-1/2 sm:py-3'>
                     <Marquee speed={70} gradient={false}>
                         {
                             brands.map((brand, index) =>
