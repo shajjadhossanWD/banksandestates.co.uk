@@ -8,8 +8,8 @@ import "swiper/css/navigation";
 import "./components.css";
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
-import Box from '@mui/material/Box';
-import { Button, Container, Typography } from "@mui/material";
+
+import { Container, Typography } from "@mui/material";
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
 const Banner = () => {
@@ -49,15 +49,14 @@ const Banner = () => {
             <SwiperSlide key={index}>
               <div style={{ width: '100%' }}>
                 <div className="md:flex justify-between items-center sm:flex-row-reverse">
-                  <img src={item.image} alt="" style={{width: '100vh', height:'80vh'}}/>
+                  <img src={item.image} alt="" style={{ width: '100vh', height: '80vh' }} />
                   <Container maxWidth="sm">
                     <Typography sx={{ fontSize: '20px', fontWeight: 'bold', mb: 2, textAlign: 'left' }}>{item.title}</Typography>
                     <div className="flex justify-start">
-
-                    <button className="btn btn-primary rounded-full">
-                      Explore More
-                      <NavigateNextIcon />
-                    </button>
+                      <button className="btn btn-primary rounded-full">
+                        Explore More
+                        <NavigateNextIcon />
+                      </button>
                     </div>
                   </Container>
                 </div>
